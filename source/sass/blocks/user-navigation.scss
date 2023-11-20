@@ -1,0 +1,112 @@
+.user-navigation__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  max-width: 600px;
+  grid-template-columns: repeat(4, auto);
+  align-content: center;
+  column-gap: 33px;
+  row-gap: 10px;
+  align-self: center;
+
+  @include vp-1023 {
+    align-self: flex-start;
+  }
+}
+
+.user-navigation a {
+  color: $color-default-white;
+  font-weight: 500;
+
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+
+  @include vp-1023 {
+    font-size: 14px;
+  }
+
+  @include vp-767 {
+    color: $color-default-dark;
+  }
+}
+
+.user-navigation__toggle {
+  display: none;
+
+  @include vp-767 {
+    padding: 0;
+    background: none;
+    border: none;
+    display: block;
+    position: absolute;
+    right: 14px;
+    top: 20px;
+  }
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+}
+
+@include vp-767 {
+  .header__user-navigation--opened .header__logotype a {
+    background-color: $color-default-dark;
+    position: absolute;
+    left: 16px;
+    top: 20px;
+  }
+
+  .header__user-navigation--opened .user-navigation__toggle {
+    width: 13px;
+    height: 13px;
+  }
+
+  .header__user-navigation--opened .user-navigation__toggle::after,
+  .header__user-navigation--opened .user-navigation__toggle::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 13px;
+    left: 0;
+    top: 40%;
+    background-color: $color-default-dark;
+    transform: rotate(45deg);
+  }
+
+  .header__user-navigation--opened .user-navigation__toggle::before {
+    transform: rotate(-45deg);
+  }
+
+  //User navigation closed
+  .header__user-navigation--closed .user-navigation__list {
+    display: none;
+  }
+
+  .header__user-navigation--closed .header__logotype a {
+    position: absolute;
+    left: 16px;
+    top: 20px;
+  }
+
+  .header__user-navigation--closed .user-navigation__toggle {
+    width: 24px;
+    height: 12px;
+  }
+
+  .header__user-navigation--closed .user-navigation__toggle::after {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    right: 0;
+    top: 0;
+    background-color: $color-default-white;
+    box-shadow: 0 5px 0 0 $color-default-white, 0 10px 0 0 $color-default-white;
+  }
+}

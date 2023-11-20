@@ -4,7 +4,8 @@
 // Default
 
 $color-default-dark:               #011c40;
-$color-default-white:               #f9fbfd;
+$color-default-white:              #f9fbfd;
+$color-card-text:                  #d8d8d9;
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -12,7 +13,7 @@ $color-default-white:               #f9fbfd;
 
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$overlay:                    rgba(0, 43, 102, 0.5);
 
 // Typography
 // ---------------------------------

@@ -1,0 +1,29 @@
+.social-links__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  column-gap: 27px;
+  row-gap: 10px;
+
+  @include vp-1023 {
+    column-gap: 22px;
+  }
+}
+
+.social-links__list a {
+  @include hover {
+    opacity: 0.5;
+  }
+
+  @include hover-focus {
+    opacity: 0.5;
+  }
+}
+
+.social-links__list svg {
+  @include vp-1023 {
+    height: 16px;
+  }
+}

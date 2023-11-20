@@ -3,10 +3,21 @@ import {Form} from './modules/form-validate/form';
 
 // ---------------------------------
 
-window.addEventListener('DOMContentLoaded', () => {
+const mainNav = document.querySelector('[data-nav="main-nav"]');
+const navToggler = document.querySelector('[data-button="main-nav-toggler"]');
 
+window.addEventListener('DOMContentLoaded', () => {
+  const tabletBreakpoint = window.matchMedia('(min-width: 768px)');
   // Utils
   // ---------------------------------
+  const onCloseMobileMenu = () => {
+    if (tabletBreakpoint.matches) {
+      if (mainNav.classList.contains('header__user-navigation--opened')) {
+        mainNav.classList.remove('header__user-navigation--opened');
+        mainNav.classList.add('header__user-navigation--closed');
+      }
+    }
+  };
 
   iosVhFix();
 
@@ -16,6 +27,18 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    if (mainNav && navToggler) {
+      navToggler.addEventListener('click', () => {
+        if (mainNav.classList.contains('header__user-navigation--closed')) {
+          mainNav.classList.remove('header__user-navigation--closed');
+          mainNav.classList.add('header__user-navigation--opened');
+        } else {
+          mainNav.classList.remove('header__user-navigation--opened');
+          mainNav.classList.add('header__user-navigation--closed');
+        }
+      });
+    }
+    tabletBreakpoint.addListener(onCloseMobileMenu);
     const form = new Form();
     window.form = form;
     form.init();

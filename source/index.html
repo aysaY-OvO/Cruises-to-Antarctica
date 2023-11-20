@@ -14,14 +14,143 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+          <nav class="header__user-navigation header__user-navigation--closed user-navigation" data-nav="main-nav">
+            <div class="header__logotype logotype">
+              <a href="#"></a>
+            </div>
+            <ul class="user-navigation__list">
+              <li>
+                <a href="#advantages">Преимущества</a>
+              </li>
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+            <button class="user-navigation__toggle" type="button" data-button="main-nav-toggler" aria-label="Открыть меню"></button>
+          </nav>
+          <div class="header__content">
+            <h1>Круизы в&nbsp;Антарктику</h1>
+            <span>Волшебный мир айсбергов и&nbsp;пингвинов</span>
+          </div>
+        </div>
       </header>
       <main>
-        <div class="container"></div>
+        <section class="preview">
+          <div class="container">
+            <div class="preview__content">
+              <h2>Путешествие на&nbsp;край Земли</h2>
+              <p>
+                Это волшебное путешествие поможет вам познакомиться поближе с&nbsp;удивительным миром Антарктики. Наш круизный лайнер отвезет вас на&nbsp;край Земли, где вы&nbsp;сможете увидеть: ледяные айсберги, несколько видов пингвинов, китов, морских котиков и&nbsp;многое другое.
+              </p>
+            </div>
+            <div class="preview__image">
+              <picture>
+                <source media="(min-width: 1024px)"
+                  srcset="./img/images/preview-bg-desktop.webp 1x, ./img/images/preview-bg-desktop@2x.webp 2x" width="560" height="301" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/images/preview-bg-tablet.webp 1x, ./img/images/preview-bg-tablet@2x.webp 2x" width="324" height="175" type="image/webp">
+                <source media="(min-width: 280px)"
+                  srcset="./img/images/preview-bg-mobile.webp 1x, ./img/images/preview-bg-mobile@2x.webp 2x" width="290" height="156" type="image/webp">
+                <source media="(min-width: 768px)"
+                  srcset="./img/images/preview-bg-tablet.jpg 1x, ./img/images/preview-bg-tablet@2x.jpg 2x" width="324" height="175">
+                <source media="(min-width: 280px)"
+                  srcset="./img/images/preview-bg-mobile.jpg 1x, ./img/images/preview-bg-mobile@2x.jpg 2x" width="290" height="156">
+                <img src="./img/images/preview-bg-desktop.jpg" srcset="./img/images/preview-bg-desktop@2x.jpg 2x" alt="3 пингвина на снегу" width="560" height="301">
+              </picture>
+            </div>
+          </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+          <div class="container">
+            <h2>Преимущества</h2>
+            <ul class="advantages__list">
+              <li>
+                <svg width="27" height="32">
+                  <use xlink:href="./img/sprite.svg#advantage-0"></use>
+                </svg>
+                <h3>Небольшой круизный лайнер</h3>
+                <p>
+                  Круизный лайнер, рассчитанный всего лишь на&nbsp;300&nbsp;гостей, поможет избежать шума и&nbsp;очередей и&nbsp;даст возможность насладиться видами и&nbsp;природой.
+                </p>
+              </li>
+              <li>
+                <svg width="38" height="32">
+                  <use xlink:href="./img/sprite.svg#advantage-1"></use>
+                </svg>
+                <h3>Система все включено</h3>
+                <p>
+                  Все наши круизы работают по&nbsp;системе &laquo;Все Включено&raquo;. Великолепные блюда и&nbsp;безлимитный бар доступны для вас 24&nbsp;часа.
+                </p>
+              </li>
+              <li>
+                <svg width="44" height="32">
+                  <use xlink:href="./img/sprite.svg#advantage-2"></use>
+                </svg>
+                <h3>Экскурсионные туры на&nbsp;Zodiac</h3>
+                <p>
+                  Экскурсионные туры к&nbsp;берегам Антарктиды совершаются на&nbsp;оборудованных лодках типа Zodiac c&nbsp;опытными экскурсоводами.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
-      <footer>
-        <div class="container"></div>
+      <footer class="footer">
+        <div class="container">
+          <nav class="footer__user-navigation user-navigation">
+            <div class="footer__logotype logotype">
+              <a href="#"></a>
+            </div>
+            <ul class="user-navigation__list">
+              <li>
+                <a href="#">Преимущества</a>
+              </li>
+              <li>
+                <a href="#">Направления</a>
+              </li>
+              <li>
+                <a href="#">Ближайшие круизы</a>
+              </li>
+              <li>
+                <a href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="footer__social-links social-links">
+            <ul class="social-links__list">
+              <li>
+                <a href="#" aria-label="ok.ru">
+                  <svg width="12" height="20">
+                    <use xlink:href="./img/sprite.svg#ok"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="dzen.ru">
+                  <svg width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#dzen"></use>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="#" aria-label="reddit.com">
+                  <svg width="20" height="20">
+                    <use xlink:href="./img/sprite.svg#reddit"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </footer>
     </div>
 
