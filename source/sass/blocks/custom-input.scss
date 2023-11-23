@@ -3,10 +3,10 @@
 
   display: flex;
   width: 303px;
-  padding: 11px 0 16px;
+  padding: 10px 0 10px;
 
   @media screen and (max-width: 767px) {
-    padding: 11px 0 16px;
+    padding: 10px 0 10px;
     width: 100%;
   }
 
@@ -25,7 +25,6 @@
       flex-grow: 1;
       max-width: 300px;
       min-height: 43px;
-      margin-left: auto;
       padding: 10px;
 
       border: none;
@@ -95,8 +94,8 @@
 
   .input-message {
     position: absolute;
-    right: 0;
-    bottom: -5px;
+    left: 0;
+    bottom: -10px;
 
     &.is-invalid {
       color: #ff0000;
