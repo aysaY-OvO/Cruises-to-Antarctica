@@ -79,6 +79,7 @@
   background-color: $color-default-dark;
   color: $color-default-white;
   transition: 0.7s;
+  overflow-y: auto;
 }
 
 .cruises__content span {
