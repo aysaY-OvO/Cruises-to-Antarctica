@@ -4,6 +4,7 @@ import {Form} from './modules/form-validate/form';
 // ---------------------------------
 
 const mainNav = document.querySelector('[data-nav="main-nav"]');
+const mainNavLinks = mainNav.querySelectorAll('[data-nav="main-nav-link"]');
 const navToggler = document.querySelector('[data-button="main-nav-toggler"]');
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +33,26 @@ window.addEventListener('DOMContentLoaded', () => {
         if (mainNav.classList.contains('header__user-navigation--closed')) {
           mainNav.classList.remove('header__user-navigation--closed');
           mainNav.classList.add('header__user-navigation--opened');
+        } else {
+          mainNav.classList.remove('header__user-navigation--opened');
+          mainNav.classList.add('header__user-navigation--closed');
+        }
+      });
+
+      Array.from(mainNavLinks).forEach((item) => {
+        item.addEventListener('click', () => {
+          if (mainNav.classList.contains('header__user-navigation--opened')) {
+            mainNav.classList.remove('header__user-navigation--opened');
+            mainNav.classList.add('header__user-navigation--closed');
+          } else {
+            return;
+          }
+        });
+      });
+
+      document.addEventListener('click', (evt) => {
+        if (evt.target === mainNav || mainNav.contains(evt.target)) {
+          return;
         } else {
           mainNav.classList.remove('header__user-navigation--opened');
           mainNav.classList.add('header__user-navigation--closed');

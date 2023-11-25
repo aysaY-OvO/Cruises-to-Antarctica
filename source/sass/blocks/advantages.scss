@@ -2,8 +2,8 @@
   background-image: url("../img/images/advantages-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 90px;
+  padding-bottom: 105px;
 
   @include retina {
     background-image: url("../img/images/advantages-bg-desktop@2x.jpg");
@@ -40,7 +40,7 @@
   font-size: 28px;
   font-weight: 600;
   line-height: 1.5;
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 
 .advantages__list {
@@ -48,7 +48,8 @@
   padding: 0;
   display: grid;
   grid-template-columns: repeat(3, minmax(210px, 360px));
-  column-gap: 25px;
+  justify-content: center;
+  column-gap: 40px;
   row-gap: 30px;
 
   @include vp-767 {
@@ -59,7 +60,7 @@
 .advantages__list li {
   box-sizing: border-box;
   background-color: $color-default-white;
-  padding: 30px 30px 50px 30px;
+  padding: 30px 30px 30px 30px;
 
   @include vp-1023 {
     padding: 25px 15px 25px 20px;
@@ -67,7 +68,7 @@
 }
 
 .advantages__list svg {
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 
   @include vp-1023 {
     height: 26px;
@@ -79,8 +80,7 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  line-height: 1.5;
-  margin-bottom: 20px;
+  line-height: 1.1;
 }
 
 .advantages__list p {

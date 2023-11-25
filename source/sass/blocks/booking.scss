@@ -48,6 +48,8 @@
 }
 
 .booking__text {
+  padding-left: 59px;
+
   @include vp-1023 {
     min-width: 419px;
     text-align: center;
@@ -61,9 +63,9 @@
 .booking__text h2 {
   font-weight: 700;
   font-size: 40px;
-  line-height: 1.5;
+  line-height: 1.1;
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 
   @include vp-1023 {
     font-size: 34px;
@@ -78,6 +80,11 @@
 .booking__text span {
   font-size: 18px;
   line-height: 1.5;
+}
+
+.booking__form-wrapper {
+  justify-self: center;
+  padding-left: 30px;
 }
 
 .booking__form {
@@ -95,7 +102,8 @@
   margin: 0;
   font-size: 18px;
   font-weight: 500;
-  margin-bottom: 9px;
+  margin-bottom: 20px;
+  line-height: 1.2;
 
   @include vp-767 {
     text-align: center;

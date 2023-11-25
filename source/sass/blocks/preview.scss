@@ -5,9 +5,9 @@
 .preview .container {
   display: grid;
   grid-template-columns: 510px auto;
-  column-gap: 40px;
-  padding-top: 120px;
-  padding-bottom: 145px;
+  column-gap: 90px;
+  padding-top: 110px;
+  padding-bottom: 125px;
 
   @include vp-1023 {
     align-items: start;
@@ -26,7 +26,7 @@
 }
 
 .preview__content {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 66px;
   max-width: 512px;
 
@@ -45,7 +45,7 @@
   font-size: 28px;
   line-height: 1;
   margin: 0;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 
   @include vp-1023 {
     font-size: 28px;

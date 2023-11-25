@@ -69,8 +69,8 @@
 }
 
 .header__content {
-  padding-top: 286px;
-  padding-left: 178px;
+  padding-top: 205px;
+  padding-left: 95px;
   padding-bottom: 286px;
 
   @include vp-1023 {
@@ -89,6 +89,8 @@
   font-size: 54px;
   line-height: 1;
   text-shadow: $color-default-dark 0 2px 5px;
+  margin: 0;
+  margin-bottom: 15px;
 
   @include vp-1023 {
     font-size: 50px;

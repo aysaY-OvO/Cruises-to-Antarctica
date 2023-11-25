@@ -1,5 +1,5 @@
 .cruises .container {
-  padding-top: 90px;
+  padding-top: 95px;
   padding-bottom: 120px;
   max-width: 1220px;
 
@@ -16,6 +16,8 @@
 
 .cruises h2 {
   text-align: center;
+  font-size: 28px;
+  font-weight: 600;
   margin-top: 0;
   margin-bottom: 60px;
 }
@@ -23,9 +25,12 @@
 .cruises__list {
   list-style-type: none;
   padding: 0;
+  margin: 0;
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fit, 260px);
+  grid-auto-rows: fit-content;
+  align-items: start;
   column-gap: 30px;
   row-gap: 30px;
 
@@ -39,10 +44,16 @@
 }
 
 .cruises__list li {
-  position: relative;
-  overflow: hidden;
+  display: flex;
+  perspective: 70em;
+}
+
+.cruises__card {
+  display: flex;
+  flex: 1;
   width: 100%;
-  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.5s ease;
 }
 
 .cruises__list img {
@@ -52,7 +63,7 @@
 .cruises__list h3 {
   position: absolute;
   margin: 0;
-  bottom: 30px;
+  bottom: 25px;
   left: 30px;
   color: $color-default-white;
   font-size: 18px;
@@ -60,42 +71,57 @@
   font-weight: 500;
 }
 
-.cruises__list li:hover .cruises__content {
-  bottom: 0;
+.cruises__card-front {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
 }
 
-.cruises__content {
-  position: absolute;
-  display: flex;
+.cruises__card-back {
   flex-direction: column;
-  justify-content: space-between;
   min-height: 100%;
-  min-width: 100%;
-  bottom: -100%;
-  padding-top: 20px;
+  padding-top: 26px;
   padding-right: 25px;
   padding-left: 25px;
-  padding-bottom: 20px;
-  background-color: $color-default-dark;
+  padding-bottom: 35px;
   color: $color-default-white;
-  transition: 0.7s;
-  overflow-y: auto;
+  transform: rotateY(180deg) translate(100%, 0);
 }
 
-.cruises__content span {
+.cruises__card-front,
+.cruises__card-back {
+  min-width: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  box-sizing: border-box;
+  background-color: $color-default-dark;
+}
+
+.cruises__list li:hover .cruises__card {
+  transform: rotateY(180deg);
+}
+
+.cruises__card-back span {
   color: $color-default-white;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
+  margin-bottom: 15px;
 }
 
-.cruises__content dt {
+.cruises__card-back dl {
+  margin: 0;
+  margin-bottom: 5px;
+  flex-grow: 1;
+}
+
+.cruises__card-back dt {
   font-size: 14px;
   font-weight: 500;
   line-height: 1.5;
 }
 
-.cruises__content dd {
+.cruises__card-back dd {
   margin: 0;
   color: $color-card-text;
   font-size: 14px;
@@ -106,7 +132,8 @@
   }
 }
 
-.cruises__content .btn {
+.cruises__card-back .btn {
+  flex-shrink: 0;
   padding: 8px 47px;
   justify-content: center;
 }
