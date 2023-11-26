@@ -1,5 +1,9 @@
 .social-links {
   padding-top: 10px;
+
+  @include vp-1023 {
+    padding-top: 0;
+  }
 }
 
 .social-links__list {
@@ -12,7 +16,7 @@
   row-gap: 10px;
 
   @include vp-1023 {
-    column-gap: 22px;
+    column-gap: 18px;
   }
 }
 

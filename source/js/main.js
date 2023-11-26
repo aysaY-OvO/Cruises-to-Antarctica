@@ -39,16 +39,18 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       });
 
-      Array.from(mainNavLinks).forEach((item) => {
-        item.addEventListener('click', () => {
-          if (mainNav.classList.contains('header__user-navigation--opened')) {
-            mainNav.classList.remove('header__user-navigation--opened');
-            mainNav.classList.add('header__user-navigation--closed');
-          } else {
-            return;
-          }
+      if (mainNavLinks) {
+        Array.from(mainNavLinks).forEach((item) => {
+          item.addEventListener('click', () => {
+            if (mainNav.classList.contains('header__user-navigation--opened')) {
+              mainNav.classList.remove('header__user-navigation--opened');
+              mainNav.classList.add('header__user-navigation--closed');
+            } else {
+              return;
+            }
+          });
         });
-      });
+      }
 
       document.addEventListener('click', (evt) => {
         if (evt.target === mainNav || mainNav.contains(evt.target)) {

@@ -12,6 +12,7 @@
 
   @include vp-1023 {
     align-self: flex-start;
+    column-gap: 25px;
   }
 }
 
@@ -45,8 +46,8 @@
     border: none;
     display: block;
     position: absolute;
-    right: 14px;
-    top: 20px;
+    right: 15px;
+    top: 25px;
   }
 
   @include hover-focus {

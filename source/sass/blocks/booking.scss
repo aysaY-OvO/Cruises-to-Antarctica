@@ -2,8 +2,6 @@
   background-image: url("../img/images/booking-bg-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 50px;
-  padding-bottom: 50px;
 
   @include retina {
     background-image: url("../img/images/booking-bg-desktop@2x.jpg");
@@ -11,8 +9,6 @@
 
   @include vp-1023 {
     background-image: url("../img/images/booking-bg-tablet.jpg");
-    padding-top: 100px;
-    padding-bottom: 100px;
 
     @include retina {
       background-image: url("../img/images/booking-bg-tablet@2x.jpg");
@@ -20,8 +16,6 @@
   }
 
   @include vp-767 {
-    padding-top: 65px;
-    padding-bottom: 65px;
     background-image: url("../img/images/booking-bg-mobile.jpg");
 
     @include retina {
@@ -35,15 +29,21 @@
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
   column-gap: 50px;
+  padding-top: 50px;
+  padding-bottom: 50px;
 
   @include vp-1023 {
     grid-template-columns: 1fr;
     justify-items: center;
-    row-gap: 60px;
+    row-gap: 52px;
+    padding-top: 95px;
+    padding-bottom: 100px;
   }
 
   @include vp-767 {
-    row-gap: 40px;
+    row-gap: 25px;
+    padding-top: 55px;
+    padding-bottom: 65px;
   }
 }
 
@@ -53,6 +53,7 @@
   @include vp-1023 {
     min-width: 419px;
     text-align: center;
+    padding-left: 0;
   }
 
   @include vp-767 {
@@ -74,17 +75,32 @@
 
   @include vp-767 {
     font-size: 24px;
+    line-height: 1.3;
   }
 }
 
 .booking__text span {
   font-size: 18px;
   line-height: 1.5;
+
+  @include vp-1023 {
+    display: block;
+    width: 350px;
+    margin: 0 auto;
+  }
+
+  @include vp-767 {
+    width: auto;
+  }
 }
 
 .booking__form-wrapper {
   justify-self: center;
   padding-left: 30px;
+
+  @include vp-1023 {
+    padding-left: 0;
+  }
 }
 
 .booking__form {
@@ -92,9 +108,13 @@
   max-width: 403px;
   color: $color-default-white;
   padding: 50px;
+  padding-top: 45px;
 
   @include vp-767 {
-    padding: 30px;
+    padding-top: 35px;
+    padding-bottom: 42px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 }
 
@@ -103,10 +123,11 @@
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
-  line-height: 1.2;
+  line-height: 1.4;
 
   @include vp-767 {
     text-align: center;
+    margin-bottom: 16px;
   }
 }
 
@@ -114,6 +135,6 @@
   padding: 15px 89px;
 
   @include vp-767 {
-    padding: 15px 48px;
+    padding: 13px 53px;
   }
 }
