@@ -1730,10 +1730,6 @@ button,
     flex-direction: column;
   }
 
-  .user-navigation__list a {
-    color: #011c40;
-  }
-
   .user-navigation__toggle {
     padding: 0;
     background: none;
@@ -2051,6 +2047,12 @@ button,
 
   .booking {
     background-image: url("../img/images/booking-bg-mobile@2x.jpg");
+  }
+}
+
+@media (max-width: 767px) and (max-width: 767px) {
+  .user-navigation__list--header a {
+    color: #011c40;
   }
 }
 
