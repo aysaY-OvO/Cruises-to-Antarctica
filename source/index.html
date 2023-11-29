@@ -17,9 +17,9 @@
       <header class="header">
         <div class="header__container container">
           <nav class="header__user-navigation header__user-navigation--closed user-navigation--header user-navigation" data-nav="main-nav">
-            <a class="header__logotype logotype" role="banner">
-              <svg width="70" height="38">
-                <use class="logotype__icon" xlink:href="./img/svg/logotype.svg#logotype" arial-label="логотип 'Круизы в Антарктику'"></use>
+            <a class="header__logotype logotype">
+              <svg width="70" height="38" role="img" aria-label="логотип 'Круизы в Антарктику'">
+                <use class="logotype__icon" xlink:href="./img/svg/logotype.svg#logotype"></use>
               </svg>
             </a>
             <ul class="user-navigation__list user-navigation__list--header">
@@ -445,12 +445,12 @@
                   </div>
                   <div class="custom-input" data-message-base="Обязательное поле" data-validate-type="phone" data-required>
                     <label for="phone" aria-label="Введите номер телефона">
-                      <input id="phone" type="phone" name="phone" placeholder="Телефон" required>
+                      <input id="phone" type="tel" name="phone" placeholder="Телефон" required>
                     </label>
                   </div>
                   <div class="custom-input" data-message-base="Обязательное поле" data-validate-type="email" data-required>
                     <label for="email" aria-label="Введите email">
-                      <input id="email" type="mail" name="mail" placeholder="Email" required>
+                      <input id="email" type="email" name="email" placeholder="Email" required>
                     </label>
                   </div>
                   <div class="custom-toggle custom-toggle--checkbox" data-message-base="Обязательное поле" data-validate-type="checkbox" data-required>
@@ -498,8 +498,8 @@
       <footer class="footer">
         <div class="footer__container container">
           <div class="footer__user-navigation user-navigation user-navigation--footer">
-            <a class="footer__logotype logotype" arial-label="логотип 'Круизы в Антарктику'">
-              <svg width="70" height="38">
+            <a class="footer__logotype logotype">
+              <svg width="70" height="38" role="img" aria-label="логотип 'Круизы в Антарктику'">
                 <use class="logotype__icon" xlink:href="./img/svg/logotype.svg#logotype"></use>
               </svg>
             </a>
