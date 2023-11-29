@@ -1,7 +1,6 @@
-.cruises .container {
-  padding-top: 95px;
+.cruises__container {
+  padding-top: 100px;
   padding-bottom: 120px;
-  max-width: 1220px;
 
   @include vp-1023 {
     padding-top: 100px;
@@ -23,7 +22,7 @@
   font-size: 28px;
   font-weight: 600;
   margin: 0;
-  margin-bottom: 60px;
+  margin-bottom: 58px;
 
   @include vp-1023 {
     font-size: 26px;
@@ -57,11 +56,11 @@
   }
 }
 
-.cruises__list li {
+.cruises__list-item {
   display: flex;
-  perspective: 70em;
   min-height: 386px;
   min-width: 260px;
+  overflow: hidden;
 
   @include vp-1023 {
     min-width: 309px;
@@ -73,53 +72,73 @@
 }
 
 .cruises__card {
-  display: flex;
-  flex: 1;
+  display: grid;
+  align-items: end;
   width: 100%;
   transform-style: preserve-3d;
   transition: all 0.5s ease;
+  z-index: 1;
 }
 
-.cruises__list img {
+.cruises__image img {
   width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
-.cruises__list h3 {
-  position: absolute;
+.cruises__title-wrapper {
+  position: relative;
+  z-index: 100;
+  margin-bottom: 13px;
+}
+
+.cruises__title-wrapper h3 {
+  backface-visibility: hidden;
   margin: 0;
-  bottom: 25px;
-  left: 30px;
   color: $color-default-white;
   font-size: 18px;
   line-height: 1.5;
   font-weight: 500;
-
-  @include vp-1023 {
-    bottom: 28px;
-    left: 33px;
-  }
-
-  @include vp-767 {
-    bottom: 18px;
-    left: 25px;
-  }
 }
 
 .cruises__card-front {
-  display: flex;
   min-height: 100%;
-  flex-direction: column;
+  display: flex;
+
+  &::after {
+    content: attr(data-cruise);
+    color: $color-default-white;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    position: relative;
+    z-index: 100;
+    padding-bottom: 25px;
+    padding-left: 30px;
+    align-self: flex-end;
+
+    @include vp-1023 {
+      padding-bottom: 30px;
+      padding-left: 35px;
+    }
+
+    @include vp-767 {
+      padding-bottom: 18px;
+      padding-left: 25px;
+    }
+  }
 }
 
 .cruises__card-back {
+  display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding-top: 30px;
+  padding-top: 28px;
   padding-right: 25px;
   padding-left: 25px;
   padding-bottom: 35px;
   color: $color-default-white;
-  transform: rotateY(180deg) translate(100%, 0);
+  transform: rotateY(180deg);
 
   @include vp-1023 {
     padding-left: 35px;
@@ -135,28 +154,24 @@
 
 .cruises__card-front,
 .cruises__card-back {
+  grid-area: 1 / -1;
   min-width: 100%;
   backface-visibility: hidden;
-  display: flex;
   box-sizing: border-box;
   background-color: $color-default-dark;
 }
 
-.cruises__list li:hover .cruises__card {
+.cruises__list-item:hover .cruises__card {
   transform: rotateY(180deg);
 }
 
-.cruises__card-back span {
-  color: $color-default-white;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 500;
-  margin-bottom: 15px;
+.cruises__list-item:hover .cruises__title-wrapper {
+  align-self: start;
 }
 
 .cruises__card-back dl {
+  position: relative;
   margin: 0;
-  margin-bottom: 5px;
   flex-grow: 1;
 }
 

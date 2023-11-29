@@ -6,6 +6,8 @@ import {Form} from './modules/form-validate/form';
 const mainNav = document.querySelector('[data-nav="main-nav"]');
 const mainNavLinks = mainNav.querySelectorAll('[data-nav="main-nav-link"]');
 const navToggler = document.querySelector('[data-button="main-nav-toggler"]');
+// const cruiseTitle = document.querySelector('[data-title="cruise-title"]');
+// const cruiseItem = document.querySelector('[data-item="cruise-item"]');
 
 window.addEventListener('DOMContentLoaded', () => {
   const tabletBreakpoint = window.matchMedia('(min-width: 768px)');
@@ -20,6 +22,11 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // const setCardHeight = (titleHeight) => {
+  //   const cruiseItemHeight = cruiseItem.offsetHeight;
+  //   const newHeight = titleHeight + cruiseItemHeight;
+  //   cruiseItem.style.height = newHeight;
+  // };
   iosVhFix();
 
   // Modules
@@ -28,6 +35,17 @@ window.addEventListener('DOMContentLoaded', () => {
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
   window.addEventListener('load', () => {
+    // setCardHeight(cruiseTitle.offsetHeight);
+    // const resizeObserver = new ResizeObserver((entries) => {
+    //   for (const entry of entries) {
+    //     if (entry.contentBoxSize) {
+    //       console.log(entry.contentRect.height);
+    //       setCardHeight(entry.contentRect.height);
+    //     }
+    //   }
+    // });
+    // resizeObserver.observe(cruiseTitle);
+
     if (mainNav && navToggler) {
       navToggler.addEventListener('click', () => {
         if (mainNav.classList.contains('header__user-navigation--closed')) {

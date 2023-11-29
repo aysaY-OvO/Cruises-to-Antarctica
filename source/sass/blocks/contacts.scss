@@ -11,7 +11,7 @@
   }
 }
 
-.contacts .container {
+.contacts__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 40px;
@@ -22,7 +22,7 @@
   @include vp-1023 {
     column-gap: 30px;
     padding-top: 100px;
-    padding-bottom: 95px;
+    padding-bottom: 90px;
   }
 
   @include vp-767 {

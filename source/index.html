@@ -15,12 +15,14 @@
   <body>
     <div class="wrapper">
       <header class="header">
-        <div class="container">
-          <nav class="header__user-navigation header__user-navigation--closed user-navigation" data-nav="main-nav">
-            <div class="header__logotype logotype">
-              <a href="#"></a>
-            </div>
-            <ul class="user-navigation__list">
+        <div class="header__container container">
+          <nav class="header__user-navigation header__user-navigation--closed user-navigation--header user-navigation" data-nav="main-nav">
+            <a class="header__logotype logotype">
+              <svg width="70" height="38">
+                <use class="logotype__icon" xlink:href="./img/svg/logotype.svg#logotype"></use>
+              </svg>
+            </a>
+            <ul class="user-navigation__list user-navigation__list--header">
               <li>
                 <a href="#advantages" data-nav="main-nav-link">Преимущества</a>
               </li>
@@ -38,13 +40,13 @@
           </nav>
           <div class="header__content">
             <h1>Круизы в&nbsp;Антарктику</h1>
-            <span>Волшебный мир айсбергов и&nbsp;пингвинов</span>
+            <p>Волшебный мир айсбергов и&nbsp;пингвинов</p>
           </div>
         </div>
       </header>
       <main>
         <section class="preview">
-          <div class="container">
+          <div class="preview__container container">
             <div class="preview__content">
               <h2>Путешествие на&nbsp;край Земли</h2>
               <p>
@@ -70,7 +72,7 @@
         </section>
 
         <section class="advantages" id="advantages">
-          <div class="container">
+          <div class="advantages__container container">
             <h2>Преимущества</h2>
             <ul class="advantages__list">
               <li>
@@ -105,31 +107,34 @@
         </section>
 
         <section class="cruises" id="cruises">
-          <div class="container">
+          <div class="cruises__container container">
             <h2>Ближайшие круизы</h2>
             <ul class="cruises__list">
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Астория&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Астория&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
                         srcset="./img/images/astoria-desktop.webp 1x, ./img/images/astoria-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
+                        <source media="(min-width: 768px)"
                         srcset="./img/images/astoria-tablet.webp 1x, ./img/images/astoria-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
+                        <source media="(min-width: 280px)"
                         srcset="./img/images/astoria-mobile.webp 1x, ./img/images/astoria-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
+                        <source media="(min-width: 1024px)"
                         srcset="./img/images/astoria-desktop.jpg 1x, ./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
+                        <source media="(min-width: 768px)"
                         srcset="./img/images/astoria-tablet.jpg 1x, ./img/images/astoria-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
+                        <source media="(min-width: 280px)"
                         srcset="./img/images/astoria-mobile.jpg 1x, ./img/images/astoria-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/astoria-desktop.jpg" srcset="./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                        <img src="./img/images/astoria-desktop.jpg" srcset="./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Астория&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Астория&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Фолклендские острова&nbsp;&mdash; Антарктида</dd>
@@ -144,28 +149,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Элайн&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/astoria-desktop.webp 1x, ./img/images/astoria-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/astoria-tablet.webp 1x, ./img/images/astoria-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/astoria-mobile.webp 1x, ./img/images/astoria-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/astoria-desktop.jpg 1x, ./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/astoria-tablet.jpg 1x, ./img/images/astoria-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/astoria-mobile.jpg 1x, ./img/images/astoria-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/astoria-desktop.jpg" srcset="./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Элайн&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/astoria-desktop.webp 1x, ./img/images/astoria-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/astoria-tablet.webp 1x, ./img/images/astoria-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/astoria-mobile.webp 1x, ./img/images/astoria-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/astoria-desktop.jpg 1x, ./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/astoria-tablet.jpg 1x, ./img/images/astoria-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/astoria-mobile.jpg 1x, ./img/images/astoria-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/astoria-desktop.jpg" srcset="./img/images/astoria-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Элайн&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Элайн&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Фолклендские острова&nbsp;&mdash; Антарктида&nbsp;&mdash; Чили</dd>
@@ -180,28 +188,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Атлантис&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/atlantis-desktop.webp 1x, ./img/images/atlantis-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/atlantis-tablet.webp 1x, ./img/images/atlantis-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/atlantis-mobile.webp 1x, ./img/images/atlantis-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/atlantis-desktop.jpg 1x, ./img/images/atlantis-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/atlantis-tablet.jpg 1x, ./img/images/atlantis-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/atlantis-mobile.jpg 1x, ./img/images/atlantis-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/atlantis-desktop.jpg" srcset="./img/images/atlantis-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Атлантис&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/atlantis-desktop.webp 1x, ./img/images/atlantis-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/atlantis-tablet.webp 1x, ./img/images/atlantis-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/atlantis-mobile.webp 1x, ./img/images/atlantis-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/atlantis-desktop.jpg 1x, ./img/images/atlantis-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/atlantis-tablet.jpg 1x, ./img/images/atlantis-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/atlantis-mobile.jpg 1x, ./img/images/atlantis-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/atlantis-desktop.jpg" srcset="./img/images/atlantis-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Атлантис&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Атлантис&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Южная Георгия и&nbsp;Южные Сандвичевы Острова&nbsp;&mdash; Антарктида</dd>
@@ -216,28 +227,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Одиссей&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/odysey-desktop.webp 1x, ./img/images/odysey-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/odysey-tablet.webp 1x, ./img/images/odysey-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/odysey-mobile.webp 1x, ./img/images/odysey-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/odysey-desktop.jpg 1x, ./img/images/odysey-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/odysey-tablet.jpg 1x, ./img/images/odysey-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/odysey-mobile.jpg 1x, ./img/images/odysey-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/odysey-desktop.jpg" srcset="./img/images/odysey-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Одиссей&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/odysey-desktop.webp 1x, ./img/images/odysey-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/odysey-tablet.webp 1x, ./img/images/odysey-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/odysey-mobile.webp 1x, ./img/images/odysey-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/odysey-desktop.jpg 1x, ./img/images/odysey-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/odysey-tablet.jpg 1x, ./img/images/odysey-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/odysey-mobile.jpg 1x, ./img/images/odysey-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/odysey-desktop.jpg" srcset="./img/images/odysey-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Одиссей&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Одиссей&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Чили&nbsp;&mdash; Антарктида</dd>
@@ -252,28 +266,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Олимпия&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/olympia-desktop.webp 1x, ./img/images/olympia-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/olympia-tablet.webp 1x, ./img/images/olympia-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/olympia-mobile.webp 1x, ./img/images/olympia-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/olympia-desktop.jpg 1x, ./img/images/olympia-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/olympia-tablet.jpg 1x, ./img/images/olympia-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/olympia-mobile.jpg 1x, ./img/images/olympia-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/olympia-desktop.jpg" srcset="./img/images/olympia-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Олимпия&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/olympia-desktop.webp 1x, ./img/images/olympia-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/olympia-tablet.webp 1x, ./img/images/olympia-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/olympia-mobile.webp 1x, ./img/images/olympia-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/olympia-desktop.jpg 1x, ./img/images/olympia-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/olympia-tablet.jpg 1x, ./img/images/olympia-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/olympia-mobile.jpg 1x, ./img/images/olympia-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/olympia-desktop.jpg" srcset="./img/images/olympia-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Олимпия&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Олимпия&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Фолклендские острова&nbsp;&mdash; Южная Георгия&nbsp;&mdash; Антарктида</dd>
@@ -288,28 +305,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Аврора&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/aurora-desktop.webp 1x, ./img/images/aurora-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/aurora-tablet.webp 1x, ./img/images/aurora-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/aurora-mobile.webp 1x, ./img/images/aurora-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/aurora-desktop.jpg 1x, ./img/images/aurora-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/aurora-tablet.jpg 1x, ./img/images/aurora-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/aurora-mobile.jpg 1x, ./img/images/aurora-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/aurora-desktop.jpg" srcset="./img/images/aurora-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Аврора&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/aurora-desktop.webp 1x, ./img/images/aurora-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/aurora-tablet.webp 1x, ./img/images/aurora-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/aurora-mobile.webp 1x, ./img/images/aurora-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/aurora-desktop.jpg 1x, ./img/images/aurora-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/aurora-tablet.jpg 1x, ./img/images/aurora-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/aurora-mobile.jpg 1x, ./img/images/aurora-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/aurora-desktop.jpg" srcset="./img/images/aurora-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Аврора&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Аврора&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Антарктида&nbsp;&mdash; Чили</dd>
@@ -324,28 +344,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Леонор&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/leonor-desktop.webp 1x, ./img/images/leonor-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/leonor-tablet.webp 1x, ./img/images/leonor-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/leonor-mobile.webp 1x, ./img/images/leonor-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/leonor-desktop.jpg 1x, ./img/images/leonor-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/leonor-tablet.jpg 1x, ./img/images/leonor-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/leonor-mobile.jpg 1x, ./img/images/leonor-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/leonor-desktop.jpg" srcset="./img/images/leonor-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Леонор&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/leonor-desktop.webp 1x, ./img/images/leonor-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/leonor-tablet.webp 1x, ./img/images/leonor-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/leonor-mobile.webp 1x, ./img/images/leonor-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/leonor-desktop.jpg 1x, ./img/images/leonor-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/leonor-tablet.jpg 1x, ./img/images/leonor-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/leonor-mobile.jpg 1x, ./img/images/leonor-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/leonor-desktop.jpg" srcset="./img/images/leonor-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Леонор&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Леонор&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Чили&nbsp;&mdash; Южная Георгия&nbsp;&mdash; Антарктида&nbsp;&mdash; Аргентина</dd>
@@ -360,28 +383,31 @@
                   </div>
                 </div>
               </li>
-              <li>
+              <li class="cruises__list-item">
                 <div class="cruises__card">
-                  <div class="cruises__card-front">
-                    <h3>Круиз &laquo;Минион&nbsp;&mdash; 1&raquo;</h3>
-                    <picture>
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/minion-desktop.webp 1x, ./img/images/minion-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/minion-tablet.webp 1x, ./img/images/minion-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/minion-mobile.webp 1x, ./img/images/minion-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
-                      <source media="(min-width: 1024px)"
-                        srcset="./img/images/minion-desktop.jpg 1x, ./img/images/minion-desktop@2x.jpg 2x" width="260" height="386">
-                      <source media="(min-width: 768px)"
-                        srcset="./img/images/minion-tablet.jpg 1x, ./img/images/minion-tablet@2x.jpg 2x" width="309" height="386">
-                      <source media="(min-width: 280px)"
-                        srcset="./img/images/minion-mobile.jpg 1x, ./img/images/minion-mobile@2x.jpg 2x" width="270" height="386">
-                      <img src="./img/images/minion-desktop.jpg" srcset="./img/images/minion-desktop@2x.jpg 2x" width="260" height="386" alt="">
-                    </picture>
+                  <div class="cruises__card-front" data-cruise="Круиз &laquo;Минион&nbsp;&mdash; 1&raquo;">
+                    <div class="cruises__image">
+                      <picture>
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/minion-desktop.webp 1x, ./img/images/minion-desktop@2x.webp 2x" width="260" height="386" type="image/webp">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/minion-tablet.webp 1x, ./img/images/minion-tablet@2x.webp 2x" width="309" height="386" type="image/webp">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/minion-mobile.webp 1x, ./img/images/minion-mobile@2x.webp 2x" width="270" height="386" type="image/webp">
+                        <source media="(min-width: 1024px)"
+                          srcset="./img/images/minion-desktop.jpg 1x, ./img/images/minion-desktop@2x.jpg 2x" width="260" height="386">
+                        <source media="(min-width: 768px)"
+                          srcset="./img/images/minion-tablet.jpg 1x, ./img/images/minion-tablet@2x.jpg 2x" width="309" height="386">
+                        <source media="(min-width: 280px)"
+                          srcset="./img/images/minion-mobile.jpg 1x, ./img/images/minion-mobile@2x.jpg 2x" width="270" height="386">
+                        <img src="./img/images/minion-desktop.jpg" srcset="./img/images/minion-desktop@2x.jpg 2x" width="260" height="386" alt="">
+                      </picture>
+                    </div>
                   </div>
                   <div class="cruises__card-back">
-                    <span>Круиз &laquo;Минион&nbsp;&mdash; 1&raquo;</span>
+                    <div class="cruises__title-wrapper">
+                      <h3>Круиз &laquo;Минион&nbsp;&mdash; 1&raquo;</h3>
+                    </div>
                     <dl>
                       <dt>Маршрут</dt>
                       <dd>Аргентина&nbsp;&mdash; Антарктида</dd>
@@ -401,7 +427,7 @@
         </section>
 
         <section class="booking">
-          <div class="container">
+          <div class="booking__container container">
             <div class="booking__text">
               <h2>Раннее бронирование</h2>
               <span>
@@ -414,24 +440,23 @@
                 <form action="https://echo.htmlacademy.ru/">
                   <div class="custom-input" data-message-base="Обязательное поле" data-validate-type="text" data-required>
                     <label for="name" aria-label="Введите имя">
-                      <input id="name" type="text" name="name" placeholder="Имя">
+                      <input id="name" type="text" name="name" placeholder="Имя" required>
                     </label>
                   </div>
                   <div class="custom-input" data-message-base="Обязательное поле" data-validate-type="phone" data-required>
                     <label for="phone" aria-label="Введите номер телефона">
-                      <input id="phone" type="text" name="phone" placeholder="Телефон">
+                      <input id="phone" type="text" name="phone" placeholder="Телефон" required>
                     </label>
                   </div>
                   <div class="custom-input" data-message-base="Обязательное поле" data-validate-type="email" data-required>
                     <label for="email" aria-label="Введите email">
-                      <input id="email" type="text" name="mail" placeholder="Email">
+                      <input id="email" type="text" name="mail" placeholder="Email" required>
                     </label>
                   </div>
                   <div class="custom-toggle custom-toggle--checkbox" data-message-base="Обязательное поле" data-validate-type="checkbox" data-required>
                     <label for="agreement">
                       Я согласен на обработку моих персональных данных
-                      <input id="agreement" type="checkbox" name="agreement">
-                      <span class="custom-toggle__icon"></span>
+                      <input id="agreement" type="checkbox" name="agreement" required>
                     </label>
                   </div>
                   <button class="btn" type="submit">Оставить заявку</button>
@@ -442,7 +467,7 @@
         </section>
 
         <section class="contacts" id="contacts">
-          <div class="container">
+          <div class="contacts__container container">
             <div class="contacts__map">
               <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7a2cee9f82dc640d3e96fe70193196617af127f59afa6033b49a0d4da257c4b&amp;source=constructor" width="560" height="306"></iframe>
             </div>
@@ -471,12 +496,14 @@
       </main>
 
       <footer class="footer">
-        <div class="container">
-          <nav class="footer__user-navigation user-navigation">
-            <div class="footer__logotype logotype">
-              <a href="#"></a>
-            </div>
-            <ul class="user-navigation__list">
+        <div class="footer__container container">
+          <div class="footer__user-navigation user-navigation user-navigation--footer">
+            <a class="footer__logotype logotype">
+              <svg width="70" height="38">
+                <use class="logotype__icon" xlink:href="./img/svg/logotype.svg#logotype"></use>
+              </svg>
+            </a>
+            <ul class="user-navigation__list user-navigation__list--footer">
               <li>
                 <a href="#">Преимущества</a>
               </li>
@@ -490,32 +517,30 @@
                 <a href="#">Контакты</a>
               </li>
             </ul>
-          </nav>
-          <div class="footer__social-links social-links">
-            <ul class="social-links__list">
-              <li>
-                <a href="#" aria-label="ok.ru">
-                  <svg width="12" height="20">
-                    <use xlink:href="./img/sprite.svg#ok"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="dzen.ru">
-                  <svg width="20" height="20">
-                    <use xlink:href="./img/sprite.svg#dzen"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="reddit.com">
-                  <svg width="20" height="20">
-                    <use xlink:href="./img/sprite.svg#reddit"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
           </div>
+          <ul class="footer__social-links social-links">
+            <li>
+              <a href="#" aria-label="ok.ru">
+                <svg width="12" height="20">
+                  <use xlink:href="./img/sprite.svg#ok"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="dzen.ru">
+                <svg width="20" height="20">
+                  <use xlink:href="./img/sprite.svg#dzen"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#" aria-label="reddit.com">
+                <svg width="20" height="20">
+                  <use xlink:href="./img/sprite.svg#reddit"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </div>

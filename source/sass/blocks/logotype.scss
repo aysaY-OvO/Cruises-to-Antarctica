@@ -1,9 +1,6 @@
-.logotype a {
+.logotype {
   display: block;
-  mask-image: url("../img/svg/logotype.svg");
-  width: 70px;
-  height: 38px;
-  background-color: $color-default-white;
+  cursor: pointer;
 
   @include hover {
     opacity: 0.5;
@@ -14,14 +11,20 @@
   }
 
   @include vp-1023 {
-    mask-image: url("../img/svg/logotype-tablet.svg");
-    width: 38px;
-    height: 20px;
+    svg {
+      width: 38px;
+      height: 20px;
+    }
   }
 
   @include vp-767 {
-    mask-image: url("../img/svg/logotype-mobile.svg");
-    width: 42px;
-    height: 22px;
+    svg {
+      width: 42px;
+      height: 22px;
+    }
   }
+}
+
+.logotype__icon {
+  fill: $color-default-white;
 }

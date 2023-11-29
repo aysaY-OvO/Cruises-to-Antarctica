@@ -1,14 +1,7 @@
 .social-links {
-  padding-top: 10px;
-
-  @include vp-1023 {
-    padding-top: 0;
-  }
-}
-
-.social-links__list {
   margin: 0;
   padding: 0;
+  padding-top: 10px;
   list-style-type: none;
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -16,11 +9,13 @@
   row-gap: 10px;
 
   @include vp-1023 {
+    align-items: center;
     column-gap: 18px;
+    padding-top: 0;
   }
 }
 
-.social-links__list a {
+.social-links a {
   @include hover {
     opacity: 0.5;
   }
@@ -30,7 +25,7 @@
   }
 }
 
-.social-links__list svg {
+.social-links svg {
   @include vp-1023 {
     height: 16px;
   }
