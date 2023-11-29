@@ -24,7 +24,7 @@
   max-width: 170px;
 }
 
-.user-navigation a {
+.user-navigation__list a {
   color: $color-default-white;
   font-weight: 500;
 
@@ -80,10 +80,14 @@
   }
 
   @include vp-767 {
-    max-width: auto;
+    max-width: none;
     grid-template-columns: 1fr;
     row-gap: 7px;
     margin-bottom: 20px;
+
+    a {
+      color: $color-default-white;
+    }
   }
 }
 
