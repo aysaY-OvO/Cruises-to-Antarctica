@@ -1813,6 +1813,9 @@ button,
     row-gap: 25px;
     left: 0;
     top: 0;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
   }
 
   .user-navigation__list--header a {
