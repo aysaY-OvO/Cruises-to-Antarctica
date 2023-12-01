@@ -5,6 +5,7 @@ import {Form} from './modules/form-validate/form';
 const mainNav = document.querySelector('[data-nav="main-nav"]');
 const mainNavLinks = mainNav.querySelectorAll('[data-nav="main-nav-link"]');
 const navToggler = document.querySelector('[data-button="main-nav-toggler"]');
+const body = document.body;
 
 window.addEventListener('DOMContentLoaded', () => {
   const tabletBreakpoint = window.matchMedia('(min-width: 768px)');
@@ -32,9 +33,11 @@ window.addEventListener('DOMContentLoaded', () => {
         if (mainNav.classList.contains('header__user-navigation--closed')) {
           mainNav.classList.remove('header__user-navigation--closed');
           mainNav.classList.add('header__user-navigation--opened');
+          body.style.overflow = 'hidden';
         } else {
           mainNav.classList.remove('header__user-navigation--opened');
           mainNav.classList.add('header__user-navigation--closed');
+          body.style.overflow = 'auto';
         }
       });
 
@@ -44,6 +47,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (mainNav.classList.contains('header__user-navigation--opened')) {
               mainNav.classList.remove('header__user-navigation--opened');
               mainNav.classList.add('header__user-navigation--closed');
+              body.style.overflow = 'auto';
             } else {
               return;
             }
@@ -57,6 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
         } else {
           mainNav.classList.remove('header__user-navigation--opened');
           mainNav.classList.add('header__user-navigation--closed');
+          body.style.overflow = 'auto';
         }
       });
     }

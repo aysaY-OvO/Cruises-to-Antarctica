@@ -1,5 +1,5 @@
 .cruises__container {
-  padding-top: 100px;
+  padding-top: 95px;
   padding-bottom: 120px;
 
   @include vp-1023 {
@@ -49,6 +49,7 @@
 
   @include vp-1023 {
     grid-template-columns: repeat(2, minmax(260px, 1fr));
+    justify-items: center;
   }
 
   @include vp-767 {
@@ -58,16 +59,17 @@
 
 .cruises__list-item {
   display: flex;
-  min-height: 386px;
+  width: 100%;
+  height: 386px;
   min-width: 260px;
   overflow: hidden;
 
   @include vp-1023 {
-    min-width: 309px;
+    max-width: 309px;
   }
 
   @include vp-767 {
-    min-width: 270px;
+    max-width: 270px;
   }
 }
 
@@ -80,10 +82,11 @@
   z-index: 1;
 }
 
-.cruises__image img {
+.cruises__image {
   width: 100%;
   position: absolute;
   z-index: 1;
+  pointer-events: none;
 }
 
 .cruises__title-wrapper {
@@ -103,7 +106,17 @@
 
 .cruises__card-front {
   min-height: 100%;
-  display: flex;
+  display: grid;
+  grid-area: 1 / 2;
+  pointer-events: none;
+
+  @include hover {
+    opacity: 0.9;
+  }
+
+  @include hover-focus {
+    opacity: 0.9;
+  }
 
   &::after {
     content: attr(data-cruise);
@@ -132,13 +145,14 @@
 .cruises__card-back {
   display: flex;
   flex-direction: column;
-  min-height: 100%;
+  height: 100%;
   padding-top: 28px;
   padding-right: 25px;
   padding-left: 25px;
   padding-bottom: 35px;
   color: $color-default-white;
   transform: rotateY(180deg);
+  overflow: auto;
 
   @include vp-1023 {
     padding-left: 35px;
@@ -161,16 +175,19 @@
   background-color: $color-default-dark;
 }
 
-.cruises__list-item:hover .cruises__card {
+.cruises__list-item:hover .cruises__card,
+.cruises__list-item:focus .cruises__card,
+.cruises__list-item:focus-within .cruises__card {
   transform: rotateY(180deg);
 }
 
-.cruises__list-item:hover .cruises__title-wrapper {
+.cruises__list-item:hover .cruises__title-wrapper,
+.cruises__list-item:focus .cruises__title-wrapper,
+.cruises__list-item:focus-within .cruises__title-wrapper {
   align-self: start;
 }
 
 .cruises__card-back dl {
-  position: relative;
   margin: 0;
   flex-grow: 1;
 }

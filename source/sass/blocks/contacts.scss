@@ -63,10 +63,8 @@
 .contacts__address {
   display: flex;
   flex-direction: column;
-}
-
-.contacts__address p {
-  margin: 0;
+  align-items: flex-start;
+  flex-wrap: wrap;
 }
 
 .contacts__address p,
@@ -79,10 +77,16 @@
   grid-template-columns: 18px 1fr;
   column-gap: 10px;
   align-items: center;
-  margin-bottom: 23px;
+  margin-bottom: 20px;
+}
+
+.contacts__address p {
+  margin-top: 0;
 }
 
 .contacts__address a {
+  width: auto;
+
   @include hover-focus {
     opacity: 0.7;
   }
@@ -91,5 +95,6 @@
 .contacts__address svg {
   @include vp-1023 {
     align-self: start;
+    margin-top: 3px;
   }
 }

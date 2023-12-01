@@ -37,6 +37,7 @@
 
   &--opened {
     width: 89%;
+    height: 100vh;
     align-content: flex-start;
     background-color: $color-default-white;
     box-shadow: -500px 500px 21px 500px $overlay;
