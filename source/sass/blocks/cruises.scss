@@ -149,7 +149,7 @@
   padding-top: 28px;
   padding-right: 25px;
   padding-left: 25px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   color: $color-default-white;
   transform: rotateY(180deg);
   overflow: auto;
@@ -202,7 +202,7 @@
   margin: 0;
   color: $color-card-text;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
 
   &:not(:last-of-type) {
     margin-bottom: 5px;
@@ -225,6 +225,7 @@
   flex-shrink: 0;
   padding: 8px 47px;
   justify-content: center;
+  margin-bottom: 5px;
 
   @include vp-767 {
     margin-right: 5px;

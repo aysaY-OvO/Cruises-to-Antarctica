@@ -34,6 +34,7 @@ window.addEventListener('DOMContentLoaded', () => {
           mainNav.classList.remove('header__user-navigation--closed');
           mainNav.classList.add('header__user-navigation--opened');
           body.style.overflow = 'hidden';
+          mainNav.style.overflow = 'auto';
         } else {
           mainNav.classList.remove('header__user-navigation--opened');
           mainNav.classList.add('header__user-navigation--closed');

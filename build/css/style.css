@@ -1204,7 +1204,7 @@ button,
   padding-top: 28px;
   padding-right: 25px;
   padding-left: 25px;
-  padding-bottom: 35px;
+  padding-bottom: 30px;
   color: #f9fbfd;
   -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
@@ -1255,7 +1255,7 @@ button,
   margin: 0;
   color: #d8d8d9;
   font-size: 14px;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .cruises__card-back dd:not(:last-of-type) {
@@ -1269,6 +1269,7 @@ button,
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
+  margin-bottom: 5px;
 }
 
 .booking {
@@ -1808,6 +1809,7 @@ button,
   .user-navigation__list--header {
     padding-top: 85px;
     padding-left: 25px;
+    padding-bottom: 25px;
     row-gap: 25px;
     left: 0;
     top: 0;
