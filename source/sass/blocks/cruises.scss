@@ -89,7 +89,6 @@
 
 .cruises__title-wrapper h3 {
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   margin: 0;
   color: $color-default-white;
   font-size: 18px;
@@ -164,7 +163,6 @@
   grid-area: 1 / -1;
   min-width: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
   box-sizing: border-box;
   background-color: $color-default-dark;
 }

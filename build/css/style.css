@@ -1161,8 +1161,8 @@ button,
 }
 
 .cruises__title-wrapper h3 {
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   margin: 0;
   color: #f9fbfd;
   font-size: 18px;
@@ -1222,8 +1222,8 @@ button,
   -ms-grid-row: 1;
   grid-area: 1/-1;
   min-width: 100%;
-  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   background-color: #011c40;
