@@ -102,8 +102,6 @@
     padding-left: 25px;
     padding-bottom: 25px;
     row-gap: 25px;
-    left: 0;
-    top: 0;
     align-items: flex-start;
 
     a {
@@ -146,6 +144,7 @@
     top: 40%;
     background-color: $color-default-dark;
     transform: rotate(45deg);
+    transition: all 0.5s ease;
   }
 
   .header__user-navigation--opened .user-navigation__toggle::before {

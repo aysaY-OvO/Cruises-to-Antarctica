@@ -41,35 +41,23 @@
   margin: 0;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fit, 260px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
   grid-auto-rows: min-content;
   align-items: start;
+  justify-items: center;
   column-gap: 30px;
   row-gap: 30px;
-
-  @include vp-1023 {
-    grid-template-columns: repeat(2, minmax(260px, 1fr));
-    justify-items: center;
-  }
-
-  @include vp-767 {
-    grid-template-columns: minmax(260px, 1fr);
-  }
 }
 
 .cruises__list-item {
   display: flex;
   width: 100%;
+  max-width: 260px;
   height: 386px;
-  min-width: 260px;
   overflow: hidden;
 
   @include vp-1023 {
-    max-width: 309px;
-  }
-
-  @include vp-767 {
-    max-width: 270px;
+    max-width: 450px;
   }
 }
 
@@ -83,10 +71,14 @@
 }
 
 .cruises__image {
-  width: 100%;
-  position: absolute;
   z-index: 1;
   pointer-events: none;
+}
+
+.cruises__image img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 .cruises__title-wrapper {
@@ -97,6 +89,7 @@
 
 .cruises__title-wrapper h3 {
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   margin: 0;
   color: $color-default-white;
   font-size: 18px;
@@ -171,6 +164,7 @@
   grid-area: 1 / -1;
   min-width: 100%;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   box-sizing: border-box;
   background-color: $color-default-dark;
 }
@@ -210,7 +204,7 @@
 
   @include vp-1023 {
     &:not(:last-of-type) {
-      margin-bottom: 10px;
+      margin-bottom: 13px;
     }
   }
 
