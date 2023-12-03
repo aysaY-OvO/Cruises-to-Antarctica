@@ -47,6 +47,10 @@
   justify-items: center;
   column-gap: 30px;
   row-gap: 30px;
+
+  @include  vp-1023 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .cruises__list-item {
