@@ -51,6 +51,10 @@
   @include  vp-1023 {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cruises__list-item {
